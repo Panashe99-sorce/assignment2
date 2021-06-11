@@ -1,0 +1,71 @@
+D<!DOCTYPE html>
+<html>
+<head>
+    <title>Enquiry Form</title>
+  <script>
+        function validateForm()
+    {
+        var fn=document.forms["enqform"]["name"].value;
+            var n=document.forms["enqform"]["number"].value;
+                var ema=document.forms["enqform"]["email"].value;
+                    var enq=document.forms["enqform"]["enquiry"].value;
+        if (fn==null|| fn=="")
+        {
+            alert("name required");
+            return false;
+        }                
+        else if (n==null||n=="")
+        {
+            alert("mobile number required");
+            return false;
+        }
+        else if (ema==null||ema=="")
+        {
+            alert("email required");
+            return false;
+        }
+        else if (enq==null||enq=="")
+        {
+            alert("enquiry  required");
+            return false;
+        }
+        if(enq!="")
+        {
+            alert("successfully Created");
+            return false;
+        }
+    }
+  </script>
+   
+   
+ <head>
+      <title>Enquiries</title>
+      <link rel="stylesheet"href="mystylesheet.css">
+      <link rel="preconnect" href="https://fonts.gstatic.com">
+	  <link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet"
+           <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        </head>
+              <body>
+                  <div class="contain">
+                      <div class="contain-box">
+                          <div class="left">
+                              <div class="right">
+							  <form name="enqform" method="post" onsubmit="validateForm()">
+                                  <h2>Enquiry Form</h2>
+								  <label for="name"></label>								  
+                                  <input type="text"class="field" id="name" name="name" placeholder="Your Full Name">	
+                                  <label for="number"> </label>							  
+                                  <input type="number"class="field" id="number" name="mobilenumber" placeholder="Your PhoneNumber">
+								  <label for="email"> </label>
+                                  <input type="email"class="field"id="email" name="email" placeholder="Your Email Address">
+								  <label for="enquiry"></label>                                 
+								  <textarea class="field" name="enquiry" id="enquiry" placeholder ="Enquiry"></textarea> 
+                                  <button class="btn-contact">Submit</button>
+								 
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+        </body>
+</html>
